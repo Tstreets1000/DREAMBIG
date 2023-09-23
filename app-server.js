@@ -1,24 +1,27 @@
-const express = require('express');
-const app = express();
-const path = require('path');
-const logger = require('morgan');
+const express = require('express')
+const app = express()
+const path = require('path')
+const favicon = require('serve-favicon')
+const logger = require('morgan')
+const ensureLoggedIn = require('./config/ensureLoggedIn')
 
-/* Middleware */
-app.use(express.json());
-app.use(express.static('public'));
-app.use(logger('dev'));
 
+// MIDDLEWARE 
+app.use(express.json()) // req. body
 app.use((req, res, next) => {
-	res.locals.data = {};
-	next();
-});
+    res.locals.data = {}
+    next()
+})
 
+// Check if token and create req.user
 app.use(require('./config/checkToken'));
-app.use('/api/students', require('./routes/api/students'));
-app.use('/api/profile', require('./routes/api/profile'));
+app.use(logger('dev')) // Everytime we make a request, we get a log
+app.use(favicon(path.join(__dirname, 'public',"img", "logo.png")))
+app.use(express.static(path.join(__dirname, "public")))
+
+app.use('/api/users', require('./routes/api/users'))
 
 app.get('*', (req, res) => {
-	res.sendFile(path.resolve(path.join(__dirname, 'public', 'index.html')));
-});
+	res.sendFile(path.join(__dirname, 'public', 'index.html'))})
 
-module.exports = app;
+module.exports = app  

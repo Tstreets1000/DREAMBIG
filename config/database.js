@@ -1,9 +1,12 @@
-require('dotenv').config();
 const mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGO_URI);
+// mongoose.connect(process.env.DATABASE_URL);
+
 const db = mongoose.connection;
 
 db.on('connected', () => {
-	console.log(`MONGO: ${db.name} ON AT ${db.host}`);
+	console.log(`Connected to ${db.name} at ${db.host}:${db.port}`);
 });
+
+module.exports = mongoose;

@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import PexelsContent from '../../components/Pexels/PexelsContent';
+import { useState, useEffect, useRef } from 'react';
+import * as usersAPI from '../../utilities/users-api'
 import styles from './HomeScreen.module.scss';
+import { Link, useNavigate } from 'react-router-dom';
+import Logo from '../../components/Logo/Logo';
+import Footer from '../../components/Footer/Footer'
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
+import NavBar from '../../components/NavBar/NavBar';
 
-export default function HomeScreen({ student, pexelsData, setPexelsData }) {
-	
 
-	return (
-		<div className={styles.home}>
-			<h1 className={styles.homeMessage}>"All your dreams can come true <i>if</i>we have the courage to pursue them!" - Walt Disney</h1>
-			<div className={styles.pexelsContent}>
-				<PexelsContent pexelsData={pexelsData} setPexelsData={setPexelsData} />
-			</div>
-		</div>
-	);
+export default function HomeScreen({ user, setUser }) {
+    const navigate = useNavigate()
+
+    return (
+        <main>
+            <Logo />
+            <UserLogOut user={user} setUser={setUser} />
+            <Footer />
+        </main>
+    )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import styles from './App.module.scss';
-import { getStudent } from '../../utilities/students-services'
+import { getUser } from '../../utilities/users-service';
 
 import Footer from '../../components/Footer/Footer';
 import UserPortal from '../../components/UserPortal/UserPortal';
@@ -16,47 +16,47 @@ import Recommend from '../../pages/Recommend/Recommend';
 import Sports from '../../pages/Sports/Sports';
 
 export default function App() {
-	const [student, setStudent] = useState(getStudent());
+	const [user, setUser] = useState(getUser());
 
 	return (
 		<main className={styles.App}>
 			<NavBar />
-			<UserPortal student={student} setStudent={setStudent} />
-			{student ? (
+			<UserPortal user={user} setUser={setUser} />
+			{user ? (
 				<>
 			<Routes>
 				<Route
 					path="/dreamBig"
 					element={
-						<HomeScreen student={student} setStudent={setStudent} />}
+						<HomeScreen user={user} setUser={setUser} />}
 				/>
 				<Route
 					path="/signUp"
-					element={<AuthPage student={student} setStudent={setStudent} />}
+					element={<AuthPage user={user} setUser={setUser} />}
 				/>
 				<Route 
 					path="/colleges" 
-					element={<Colleges student={student} setStudent={setStudent} />} 
+					element={<Colleges user={user} setUser={setUser} />} 
 				/>
 				<Route 
 					path="/extraCurr" 
-					element={<ExtraCurr student={student} setStudent={setStudent} />} 
+					element={<ExtraCurr user={user} setUser={setUser} />} 
 				/>
 				<Route 
 					path="/grades" 
-					element={<Grades student={student} setStudent={setStudent} />} 
+					element={<Grades user={user} setUser={setUser} />} 
 				/>
 				<Route
 					path="/profile"
-					element={<Profile student={student} setStudent={setStudent} />}
+					element={<Profile user={user} setUser={setUser}/>}
 				/>
 				<Route 
 					path="/recommend" 
-					element={<Recommend student={student} setStudent={setStudent} />} 
+					element={<Recommend user={user} setUser={setUser} />} 
 				/>
 				<Route
 					path="/sports"
-					element={<Sports student={student} setStudent={setStudent} />}
+					element={<Sports user={user} setUser={setUser} />}
 				/>
 				{/* redirect to /dreamBig if path in address bar hasn't matched a <Route> above */}
 				<Route path="/*" element={<Navigate to="/dreamBig" />} />
@@ -64,7 +64,7 @@ export default function App() {
 			<Footer />
 			</>
 			) : (
-				<AuthPage setStudent={setStudent} />
+				<AuthPage setUser={setUser} />
 			)}
 		</main>
 	);
