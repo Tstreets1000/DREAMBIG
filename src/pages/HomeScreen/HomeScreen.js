@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import PexelsContent from '../../components/Pexels/PexelsContent';
 import styles from './HomeScreen.module.scss';
 
-export default function HomeScreen({ user, pexelsData, setPexelsData }) {
-	console.log(user);
+export default function HomeScreen({ student, pexelsData, setPexelsData }) {
+	
 
 	return (
 		<div className={styles.home}>

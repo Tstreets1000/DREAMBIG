@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const Schema = mongoose.Schema
 
 const SALT_ROUNDS = 5
-// user schema will need name (string) require this to be true and email (string) require to be true, 
+// student schema will need name (string) require this to be true and email (string) require to be true, 
     //and make it unique, so emails cannot be the same.
 // password(string) add minimum length and required.
 // add timestamps to know when people sign in/up.
@@ -15,8 +15,11 @@ const studentSchema = new mongoose.Schema(
         email: { type: String, unique: true, trim: true, lowercase: true, required: true },
         password: { type: String, minLength: 5, trim: true, required: true },
 		isLoggedIn: { type: Boolean, required: true, default: false },
-        teacher: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Teacher'}],
-        coach: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Coach'}]
+        sports: { type: String },
+        hobbies: { type: String },
+        currentGrade: {type: Number},
+        graduationDate: {type: Date}
+   
     }, 
     {
         timestamps: true

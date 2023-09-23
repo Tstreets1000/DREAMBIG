@@ -5,12 +5,12 @@ module.exports = function (req, res, next) {
 	if (token) {
 		token = token.replace('Bearer ', '');
 		jwt.verify(token, process.env.SECRET, function (err, decoded) {
-			req.user = err ? null : decoded.user;
+			req.student = err ? null : decoded.student;
 			req.exp = err ? null : new Date(decoded.exp * 1000);
 		});
 		return next();
 	} else {
-		req.user = null;
+		req.student = null;
 		return next();
 	}
 };
