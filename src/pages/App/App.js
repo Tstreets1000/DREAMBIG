@@ -26,40 +26,79 @@ export default function App() {
 				<>
 			<Routes>
 				<Route
-					path="/dreamBig"
+					path="/dreambig"
 					element={
-						<HomeScreen user={user} setUser={setUser} />}
+						<HomeScreen 
+							user={user} 
+							setUser={setUser} 
+						/>
+					}
 				/>
 				<Route
 					path="/signUp"
-					element={<AuthPage user={user} setUser={setUser} />}
+					element={
+						<AuthPage 
+							user={user} 
+							setUser={setUser} 
+						/>
+					}
 				/>
 				<Route 
 					path="/colleges" 
-					element={<Colleges user={user} setUser={setUser} />} 
+					element={
+						<Colleges 
+							user={user} 
+							setUser={setUser} 
+						/>
+					} 
 				/>
 				<Route 
 					path="/extraCurr" 
-					element={<ExtraCurr user={user} setUser={setUser} />} 
+					element={
+						<ExtraCurr 
+							user={user} 
+							setUser={setUser} 
+						/>
+					} 
 				/>
 				<Route 
 					path="/grades" 
-					element={<Grades user={user} setUser={setUser} />} 
+					element={
+						<Grades 
+							user={user} 
+							setUser={setUser} 
+						/>
+					} 
 				/>
 				<Route
 					path="/profile"
-					element={<Profile user={user} setUser={setUser}/>}
+					element={
+						<Profile 
+							user={user} 
+							setUser={setUser}
+						/>
+					}
 				/>
 				<Route 
 					path="/recommend" 
-					element={<Recommend user={user} setUser={setUser} />} 
+					element={	
+						<Recommend 
+							user={user} 
+							setUser={setUser} 
+						/>
+					} 
 				/>
 				<Route
 					path="/sports"
-					element={<Sports user={user} setUser={setUser} />}
+					element={
+						<Sports 
+							user={user} 
+							setUser={setUser} 
+						/>
+					}
 				/>
 				{/* redirect to /dreamBig if path in address bar hasn't matched a <Route> above */}
-				<Route path="/*" element={<Navigate to="/dreamBig" />} />
+				<Route path="/*" element={<Navigate to="/dreambig" />} />
 			</Routes>
 			<Footer />
 			</>

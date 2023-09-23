@@ -1,39 +1,40 @@
-// need to require mongoose & bcrypt
-const mongoose = require('mongoose')
-const bcrypt = require('bcrypt')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
+const Schema = mongoose.Schema;
 
-const SALT_ROUNDS = 5
-// student schema will need name (string) require this to be true and email (string) require to be true, 
-    //and make it unique, so emails cannot be the same.
-// password(string) add minimum length and required.
-// add timestamps to know when people sign in/up.
+const SALT_ROUNDS = 6;
 
-const studentSchema = new mongoose.Schema(
-    {
-        name: { type: String, required: true },
-        email: { type: String, unique: true, trim: true, lowercase: true, required: true },
-        password: { type: String, minLength: 5, trim: true, required: true },
-		isLoggedIn: { type: Boolean, required: true, default: false },
-        sports: { type: String },
-        hobbies: { type: String },
-        currentGrade: {type: Number},
-        graduationDate: {type: Date}
-   
-    }, 
-    {
-        timestamps: true
+const userSchema = new Schema({
+  name: { type: String, required: true },
+  email: {
+    type: String,
+    unique: true,
+    trim: true,
+    lowercase: true,
+    required: true
+  },
+  password: {
+    type: String,
+    trim: true,
+    minlength: 3,
+    required: true
+  }
+}, {
+  timestamps: true,
+  toJSON: {
+    transform: function(doc, ret) {
+      delete ret.password;
+      return ret;
     }
-)
-
-// add studentSchema save function
-studentSchema.pre('save', async function (next) {
-	if (!this.isModified('password')) return next();
-	//updates the password with the computed hash
-	this.password = await bcrypt.hash(this.password, SALT_ROUNDS);
-	return next();
+  }
 });
 
-const Student = mongoose.model('Student', studentSchema);
+userSchema.pre('save', async function(next) {
+  // 'this' is the use document
+  if (!this.isModified('password')) return next();
+  // update the password with the computed hash
+  this.password = await bcrypt.hash(this.password, SALT_ROUNDS);
+  return next();
+});
 
-module.exports = Student;
+module.exports = mongoose.model('User', userSchema)
