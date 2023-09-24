@@ -175,7 +175,9 @@ function NavBar(_ref) {
     href: "/extras"
   }, "Extracurricular Activities")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "/recommendations"
-  }, "Recommendations")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
+  }, "Recommendations")))), /*#__PURE__*/React.createElement("div", {
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].Header
+  }, /*#__PURE__*/React.createElement("h1", null, "CENTRAL HIGH SCHOOL"), /*#__PURE__*/React.createElement("h3", null, "PRINCE J. HILL c/o 2026")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
     className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].Photo,
     src: "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/382455179_6857406104320670_8875021857050077734_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=GYpUXjnWKJkAX8StIiC&_nc_ht=scontent-atl3-1.xx&oh=00_AfBtKu7E5mXt5wJ91tysjRnWg2Hf6tuPhvz8Z4f9o53Irw&oe=6515817F",
     width: "250",
@@ -1158,13 +1160,21 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   color: black;
 }
 
+.iVlAaEkIuAFxF6sNomjC {
+  color: maroon;
+  font-family: "Times New Roman", Times, serif;
+  margin: -606px 0px 534px 838px;
+  font-size: x-large;
+}
+
 .Uth0LX9CjtQ4k4dhZgtm {
-  margin: -849px 10px -263px 832px;
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,qBAAA;EACA,6BAAA;AACJ;AAEI;EACI,gBAAA;EACA,0BAAA;EACA,eAAA;EACA,4CAAA;EACA,gBAAA;EACA,aAAA;AAAR;AAEQ;EACI,YAAA;AAAZ;;AAQA;EACI,gCAAA;AALJ","sourcesContent":[".NavBar {\n    display: inline-block;\n    margin: 51px 2px -104px 352px;\n\n\n    .Links li a {\n        list-style: none;\n        margin: 25px 50px 0px 40px;\n        font-size: 25px;\n        font-family: 'Times New Roman', Times, serif;\n        font-weight: 900;\n        color: maroon;\n            \n        &:hover {\n            color: black;\n        }\n\n\n    }\n\n}\n\n.Photo {\n    margin: -849px 10px -263px 832px\n}\n\n\n\n"],"sourceRoot":""}]);
+  margin: -845px 12px -295px 950px;
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,qBAAA;EACA,6BAAA;AACJ;AAEI;EACI,gBAAA;EACA,0BAAA;EACA,eAAA;EACA,4CAAA;EACA,gBAAA;EACA,aAAA;AAAR;AAEQ;EACI,YAAA;AAAZ;;AAQA;EACI,aAAA;EACA,4CAAA;EACA,8BAAA;EACA,kBAAA;AALJ;;AAQA;EACI,gCAAA;AALJ","sourcesContent":[".NavBar {\n    display: inline-block;\n    margin: 51px 2px -104px 352px;\n\n\n    .Links li a {\n        list-style: none;\n        margin: 25px 50px 0px 40px;\n        font-size: 25px;\n        font-family: 'Times New Roman', Times, serif;\n        font-weight: 900;\n        color: maroon;\n            \n        &:hover {\n            color: black;\n        }\n\n\n    }\n\n}\n\n.Header {\n    color: maroon;\n    font-family: 'Times New Roman', Times, serif;\n    margin: -606px 0px 534px 838px;\n    font-size: x-large;\n}\n\n.Photo {\n    margin: -845px 12px -295px 950px\n}\n\n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
 	"Links": `mq7oEaSkRoDV3bNXSeeL`,
+	"Header": `iVlAaEkIuAFxF6sNomjC`,
 	"Photo": `Uth0LX9CjtQ4k4dhZgtm`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
