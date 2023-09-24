@@ -13,9 +13,7 @@ export default function Recommend({ user, setUser }) {
 
     return (
         <main>
-            <Logo />
             <UserLogOut user={user} setUser={setUser} />
-            <Footer />
         </main>
     )
 }

@@ -80,7 +80,7 @@ export default function App() {
 					}
 				/>
 				<Route 
-					path="/recommend" 
+					path="/recommendations" 
 					element={	
 						<Recommend 
 							user={user} 
