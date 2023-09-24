@@ -31,6 +31,9 @@ export default function NavBar({ Home, Profile, Sports, Grades, Colleges, Extras
 					</li>
 				</ul>
 			</aside>
+			<div>
+			<img className={styles.Photo} src="https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/382455179_6857406104320670_8875021857050077734_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=GYpUXjnWKJkAX8StIiC&_nc_ht=scontent-atl3-1.xx&oh=00_AfBtKu7E5mXt5wJ91tysjRnWg2Hf6tuPhvz8Z4f9o53Irw&oe=6515817F" width="250" height="450"></img>
+			</div>
 		</section>
 	);
 }

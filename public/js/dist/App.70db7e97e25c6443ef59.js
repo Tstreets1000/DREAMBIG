@@ -175,7 +175,12 @@ function NavBar(_ref) {
     href: "/extras"
   }, "Extracurricular Activities")), /*#__PURE__*/React.createElement("li", null, /*#__PURE__*/React.createElement("a", {
     href: "/recommendations"
-  }, "Recommendations")))));
+  }, "Recommendations")))), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("img", {
+    className: _NavBar_module_scss__WEBPACK_IMPORTED_MODULE_0__["default"].Photo,
+    src: "https://scontent-atl3-1.xx.fbcdn.net/v/t39.30808-6/382455179_6857406104320670_8875021857050077734_n.jpg?stp=cp6_dst-jpg&_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=GYpUXjnWKJkAX8StIiC&_nc_ht=scontent-atl3-1.xx&oh=00_AfBtKu7E5mXt5wJ91tysjRnWg2Hf6tuPhvz8Z4f9o53Irw&oe=6515817F",
+    width: "250",
+    height: "450"
+  })));
 }
 
 /***/ }),
@@ -591,7 +596,7 @@ function AuthPage(_ref) {
   const [showLogin, setShowLogin] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
   return /*#__PURE__*/React.createElement("main", {
     className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].AuthPage
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement(_components_Logo_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/React.createElement("h3", {
+  }, /*#__PURE__*/React.createElement(_components_Logo_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/React.createElement("aside", null, /*#__PURE__*/React.createElement("h3", {
     onClick: () => setShowLogin(!showLogin)
   }, showLogin ? 'SIGN UP' : 'LOG IN')), showLogin ? /*#__PURE__*/React.createElement(_components_LoginForm_LoginForm__WEBPACK_IMPORTED_MODULE_2__["default"], {
     setUser: setUser
@@ -1139,7 +1144,7 @@ var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBP
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
   display: inline-block;
-  margin: 50px 0px 0px 60px;
+  margin: 51px 2px -104px 352px;
 }
 .QpVD3qAS0nYBtoQqAYoe .mq7oEaSkRoDV3bNXSeeL li a {
   list-style: none;
@@ -1151,11 +1156,16 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 }
 .QpVD3qAS0nYBtoQqAYoe .mq7oEaSkRoDV3bNXSeeL li a:hover {
   color: black;
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,qBAAA;EACA,yBAAA;AACJ;AAEI;EACI,gBAAA;EACA,0BAAA;EACA,eAAA;EACA,4CAAA;EACA,gBAAA;EACA,aAAA;AAAR;AAEQ;EACI,YAAA;AAAZ","sourcesContent":[".NavBar {\n    display: inline-block;\n    margin: 50px 0px 0px 60px;\n\n\n    .Links li a {\n        list-style: none;\n        margin: 25px 50px 0px 40px;\n        font-size: 25px;\n        font-family: 'Times New Roman', Times, serif;\n        font-weight: 900;\n        color: maroon;\n            \n        &:hover {\n            color: black;\n        }\n\n\n}\n\n}\n\n\n\n"],"sourceRoot":""}]);
+}
+
+.Uth0LX9CjtQ4k4dhZgtm {
+  margin: -849px 10px -263px 832px;
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,qBAAA;EACA,6BAAA;AACJ;AAEI;EACI,gBAAA;EACA,0BAAA;EACA,eAAA;EACA,4CAAA;EACA,gBAAA;EACA,aAAA;AAAR;AAEQ;EACI,YAAA;AAAZ;;AAQA;EACI,gCAAA;AALJ","sourcesContent":[".NavBar {\n    display: inline-block;\n    margin: 51px 2px -104px 352px;\n\n\n    .Links li a {\n        list-style: none;\n        margin: 25px 50px 0px 40px;\n        font-size: 25px;\n        font-family: 'Times New Roman', Times, serif;\n        font-weight: 900;\n        color: maroon;\n            \n        &:hover {\n            color: black;\n        }\n\n\n    }\n\n}\n\n.Photo {\n    margin: -849px 10px -263px 832px\n}\n\n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
-	"Links": `mq7oEaSkRoDV3bNXSeeL`
+	"Links": `mq7oEaSkRoDV3bNXSeeL`,
+	"Photo": `Uth0LX9CjtQ4k4dhZgtm`
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
