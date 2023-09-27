@@ -82,28 +82,35 @@ function LoginForm(_ref) {
     });
     return _handleSubmit.apply(this, arguments);
   }
-  return /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h1", null, /*#__PURE__*/React.createElement("strong", null, "Sudent Services")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("form", {
+  return /*#__PURE__*/React.createElement("main", {
+    className: _LoginForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].StudentServices
+  }, /*#__PURE__*/React.createElement("h1", null, /*#__PURE__*/React.createElement("strong", null, "Account Services - LOG IN")), /*#__PURE__*/React.createElement("form", {
     autoComplete: "off",
     onSubmit: handleSubmit
   }, /*#__PURE__*/React.createElement("label", {
-    className: _LoginForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logInBtn
-  }, "Email:"), /*#__PURE__*/React.createElement("input", {
+    className: _LoginForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Label
+  }, "Email: "), /*#__PURE__*/React.createElement("input", {
+    className: _LoginForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Placeholder,
+    placeholder: "EMAIL HERE",
     type: "text",
     name: "email",
     value: credentials.email,
     onChange: handleChange,
     required: true
   }), /*#__PURE__*/React.createElement("label", {
-    className: _LoginForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].logInBtn
-  }, "Password:"), /*#__PURE__*/React.createElement("input", {
+    className: _LoginForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Label
+  }, "Password: "), /*#__PURE__*/React.createElement("input", {
+    className: _LoginForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Placeholder,
+    placeholder: "PASSWORD HERE",
     type: "password",
     name: "password",
     value: credentials.password,
     onChange: handleChange,
     required: true
   }), /*#__PURE__*/React.createElement("button", {
-    submit: true
-  }, "LOG IN"))), /*#__PURE__*/React.createElement("p", {
+    className: _LoginForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].LogInBtn,
+    type: "submit"
+  }, "LOG IN")), /*#__PURE__*/React.createElement("p", {
     className: "error-message"
   }, "\xA0", error));
 }
@@ -255,38 +262,46 @@ function SignUpForm(_ref) {
   }();
   const disable = formData.password !== formData.confirm;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("main", {
-    className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].SignUpForm
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
-    className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].SForm,
+    className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].StudentServices
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("strong", null, "Account Services - SIGNUP")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
+    className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].SignUpForm,
     autoComplete: "off",
     onSubmit: handleSubmit
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Username: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Label
+  }, "Username: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Placeholder,
-    placeholder: "name",
+    placeholder: "USERNAME HERE",
     type: "text",
     name: "name",
     value: formData.username,
     onChange: handleChange,
     required: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Email: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Label
+  }, "Email: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Placeholder,
-    placeholder: "Email",
+    placeholder: "EMAIL HERE",
     type: "email",
     name: "email",
     value: formData.email,
     onChange: handleChange,
     required: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Password: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Label
+  }, "Password: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Placeholder,
-    placeholder: "Password",
+    placeholder: "PASSWORD HERE",
     type: "password",
     name: "password",
     value: formData.password,
     onChange: handleChange,
     required: true
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", null, "Confirm Password: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("label", {
+    className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Label
+  }, "Confirm Password: "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
     className: _SignUpForm_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].Placeholder,
-    placeholder: "Confirm Password",
+    placeholder: "CONFIRM PASSWORD HERE",
     type: "password",
     name: "confirm",
     value: formData.confirm,
@@ -596,9 +611,8 @@ function AuthPage(_ref) {
     setUser
   } = _ref;
   const [showLogin, setShowLogin] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(true);
-  return /*#__PURE__*/React.createElement("main", {
-    className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].AuthPage
-  }, /*#__PURE__*/React.createElement(_components_Logo_Logo__WEBPACK_IMPORTED_MODULE_4__["default"], null), /*#__PURE__*/React.createElement("aside", null, /*#__PURE__*/React.createElement("h3", {
+  return /*#__PURE__*/React.createElement("main", null, /*#__PURE__*/React.createElement("aside", null, /*#__PURE__*/React.createElement("button", {
+    className: _AuthPage_module_scss__WEBPACK_IMPORTED_MODULE_1__["default"].AuthPage,
     onClick: () => setShowLogin(!showLogin)
   }, showLogin ? 'SIGN UP' : 'LOG IN')), showLogin ? /*#__PURE__*/React.createElement(_components_LoginForm_LoginForm__WEBPACK_IMPORTED_MODULE_2__["default"], {
     setUser: setUser
@@ -1092,9 +1106,39 @@ ___CSS_LOADER_EXPORT___.locals = {};
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.PVZU1QBgUgunvzNatCBb {
+  display: flexbox;
+  margin: -6px -4px 36px 431px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0px 0px 12px 148px;
+}
+.PVZU1QBgUgunvzNatCBb .GaWjdZjTYKDoZXGe6J02 {
+  text-align: center;
+  color: maroon;
+  margin: 21px 24px 0px 19px;
+  border: 2px solid maroon;
+}
+.PVZU1QBgUgunvzNatCBb .Bj57Ok65OB7FeZUvRPWw {
+  color: maroon;
+  font-style: italic;
+}
+.PVZU1QBgUgunvzNatCBb .Hg5qipBpdv68l9Q3x9MC {
+  background-color: maroon;
+  color: whitesmoke;
+  border: 2px solid black;
+}
+.PVZU1QBgUgunvzNatCBb .Hg5qipBpdv68l9Q3x9MC:hover {
+  color: maroon;
+  background-color: silver;
+  border: 2px solid maroon;
+}`, "",{"version":3,"sources":["webpack://./src/components/LoginForm/LoginForm.module.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,4BAAA;EACA,4CAAA;EACA,2BAAA;AACJ;AACI;EACI,kBAAA;EACA,aAAA;EACA,0BAAA;EACA,wBAAA;AACR;AAEI;EACI,aAAA;EACA,kBAAA;AAAR;AAGI;EACI,wBAAA;EACA,iBAAA;EACA,uBAAA;AADR;AAGQ;EACI,aAAA;EACA,wBAAA;EACA,wBAAA;AADZ","sourcesContent":[".StudentServices {\n    display: flexbox;\n    margin: -6px -4px 36px 431px;\n    font-family: 'Times New Roman', Times, serif;\n    padding: 0px 0px 12px 148px;\n\n    .Placeholder {\n        text-align: center;\n        color: maroon;\n        margin: 21px 24px 0px 19px;\n        border: 2px solid maroon;\n    }\n\n    .Label {\n        color: maroon;\n        font-style: italic;\n    }\n\n    .LogInBtn {\n        background-color: maroon;\n        color: whitesmoke;\n        border: 2px solid black;\n\n        &:hover {\n            color: maroon;\n            background-color: silver;\n            border: 2px solid maroon;\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"StudentServices": `PVZU1QBgUgunvzNatCBb`,
+	"Placeholder": `GaWjdZjTYKDoZXGe6J02`,
+	"Label": `Bj57Ok65OB7FeZUvRPWw`,
+	"LogInBtn": `Hg5qipBpdv68l9Q3x9MC`
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -1159,6 +1203,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 .QpVD3qAS0nYBtoQqAYoe .mq7oEaSkRoDV3bNXSeeL li a:hover {
   color: black;
 }
+.QpVD3qAS0nYBtoQqAYoe .mq7oEaSkRoDV3bNXSeeL li a:active {
+  color: black;
+}
 
 .iVlAaEkIuAFxF6sNomjC {
   color: maroon;
@@ -1169,7 +1216,9 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.QpVD3qAS0nYBtoQqAYoe {
 
 .Uth0LX9CjtQ4k4dhZgtm {
   margin: -845px 12px -295px 950px;
-}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,qBAAA;EACA,6BAAA;AACJ;AAEI;EACI,gBAAA;EACA,0BAAA;EACA,eAAA;EACA,4CAAA;EACA,gBAAA;EACA,aAAA;AAAR;AAEQ;EACI,YAAA;AAAZ;;AAQA;EACI,aAAA;EACA,4CAAA;EACA,8BAAA;EACA,kBAAA;AALJ;;AAQA;EACI,gCAAA;AALJ","sourcesContent":[".NavBar {\n    display: inline-block;\n    margin: 51px 2px -104px 352px;\n\n\n    .Links li a {\n        list-style: none;\n        margin: 25px 50px 0px 40px;\n        font-size: 25px;\n        font-family: 'Times New Roman', Times, serif;\n        font-weight: 900;\n        color: maroon;\n            \n        &:hover {\n            color: black;\n        }\n\n\n    }\n\n}\n\n.Header {\n    color: maroon;\n    font-family: 'Times New Roman', Times, serif;\n    margin: -606px 0px 534px 838px;\n    font-size: x-large;\n}\n\n.Photo {\n    margin: -845px 12px -295px 950px\n}\n\n\n\n"],"sourceRoot":""}]);
+  border: 2px solid black;
+  box-shadow: 10px 10px 10px black;
+}`, "",{"version":3,"sources":["webpack://./src/components/NavBar/NavBar.module.scss"],"names":[],"mappings":"AAAA;EACI,qBAAA;EACA,6BAAA;AACJ;AAEI;EACI,gBAAA;EACA,0BAAA;EACA,eAAA;EACA,4CAAA;EACA,gBAAA;EACA,aAAA;AAAR;AAEQ;EACI,YAAA;AAAZ;AAGQ;EACI,YAAA;AADZ;;AASA;EACI,aAAA;EACA,4CAAA;EACA,8BAAA;EACA,kBAAA;AANJ;;AASA;EACI,gCAAA;EACA,uBAAA;EACA,gCAAA;AANJ","sourcesContent":[".NavBar {\n    display: inline-block;\n    margin: 51px 2px -104px 352px;\n\n\n    .Links li a {\n        list-style: none;\n        margin: 25px 50px 0px 40px;\n        font-size: 25px;\n        font-family: 'Times New Roman', Times, serif;\n        font-weight: 900;\n        color: maroon;\n            \n        &:hover {\n            color: black;\n        }\n\n        &:active {\n            color: black;\n        }\n\n\n    }\n\n}\n\n.Header {\n    color: maroon;\n    font-family: 'Times New Roman', Times, serif;\n    margin: -606px 0px 534px 838px;\n    font-size: x-large;\n}\n\n.Photo {\n    margin: -845px 12px -295px 950px;\n    border: 2px solid black;\n    box-shadow: 10px 10px 10px black;\n}\n\n\n\n"],"sourceRoot":""}]);
 // Exports
 ___CSS_LOADER_EXPORT___.locals = {
 	"NavBar": `QpVD3qAS0nYBtoQqAYoe`,
@@ -1200,9 +1249,41 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.bnPGyLM6WpPXkt9Q_M6n {
+  display: flexbox;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.bnPGyLM6WpPXkt9Q_M6n .AZyVy8LqmhkdEsCxUMdf {
+  padding: 20px 20px 10px 10px;
+  gap: 20px;
+}
+.bnPGyLM6WpPXkt9Q_M6n .qFsNlXrsptQmg6Y86kER {
+  text-align: center;
+  margin: 21px 24px 0px 19px;
+  border: 2px solid maroon;
+}
+.bnPGyLM6WpPXkt9Q_M6n .aO2KnkFzrbcQj3RMtYIz {
+  color: maroon;
+  font-style: italic;
+}
+.bnPGyLM6WpPXkt9Q_M6n .QEIsPbRqcfaE50zSwSbj {
+  background-color: maroon;
+  color: white;
+  border: 2px solid black;
+}
+.bnPGyLM6WpPXkt9Q_M6n .QEIsPbRqcfaE50zSwSbj:hover {
+  background-color: silver;
+  color: maroon;
+}`, "",{"version":3,"sources":["webpack://./src/components/SignUpForm/SignUpForm.module.scss"],"names":[],"mappings":"AAAA;EACI,gBAAA;EACA,kBAAA;EACA,4CAAA;AACJ;AACI;EACI,4BAAA;EACA,SAAA;AACR;AAEI;EACI,kBAAA;EACA,0BAAA;EACA,wBAAA;AAAR;AAGI;EACI,aAAA;EACA,kBAAA;AADR;AAII;EACI,wBAAA;EACA,YAAA;EACA,uBAAA;AAFR;AAIQ;EACI,wBAAA;EACA,aAAA;AAFZ","sourcesContent":[".StudentServices {\n    display: flexbox;\n    text-align: center;\n    font-family: 'Times New Roman', Times, serif;\n\n    .SignUpForm {\n        padding: 20px 20px 10px 10px;\n        gap: 20px;\n    }\n\n    .Placeholder {\n        text-align: center;\n        margin: 21px 24px 0px 19px;\n        border: 2px solid maroon;\n    }\n\n    .Label {\n        color: maroon;\n        font-style: italic;\n    }\n\n    .SignUpBtn {\n        background-color: maroon;\n        color: white;\n        border: 2px solid black;\n\n        &:hover {\n            background-color: silver;\n            color: maroon;\n        }\n    }\n}\n"],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"StudentServices": `bnPGyLM6WpPXkt9Q_M6n`,
+	"SignUpForm": `AZyVy8LqmhkdEsCxUMdf`,
+	"Placeholder": `qFsNlXrsptQmg6Y86kER`,
+	"Label": `aO2KnkFzrbcQj3RMtYIz`,
+	"SignUpBtn": `QEIsPbRqcfaE50zSwSbj`
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
@@ -1309,9 +1390,23 @@ ___CSS_LOADER_EXPORT___.locals = {
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `.RygkJgZmBHTETlLP3C3i {
+  color: ghostwhite;
+  background-color: maroon;
+  border: 2px solid black;
+  margin: 0px 51px 24px 821px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.RygkJgZmBHTETlLP3C3i:hover {
+  color: maroon;
+  background-color: silver;
+  border: 2px solid maroon;
+}`, "",{"version":3,"sources":["webpack://./src/pages/AuthPage/AuthPage.module.scss"],"names":[],"mappings":"AAAA;EACI,iBAAA;EACA,wBAAA;EACA,uBAAA;EACA,2BAAA;EACA,4CAAA;EACA,eAAA;AACJ;AACI;EACI,aAAA;EACA,wBAAA;EACA,wBAAA;AACR","sourcesContent":[".AuthPage {\n    color: ghostwhite;\n    background-color: maroon;\n    border: 2px solid black;\n    margin: 0px 51px 24px 821px;\n    font-family: 'Times New Roman', Times, serif;\n    font-size: 20px;\n\n    &:hover {\n        color: maroon;\n        background-color: silver;\n        border: 2px solid maroon;\n    }\n    \n}"],"sourceRoot":""}]);
 // Exports
-___CSS_LOADER_EXPORT___.locals = {};
+___CSS_LOADER_EXPORT___.locals = {
+	"AuthPage": `RygkJgZmBHTETlLP3C3i`
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 

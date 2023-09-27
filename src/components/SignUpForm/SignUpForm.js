@@ -47,38 +47,39 @@ function SignUpForm({ setUser }) {
 	const disable = formData.password !== formData.confirm;
 
 	return (
-		<main className={styles.SignUpForm}>
-			<form className={styles.SForm} autoComplete="off" onSubmit={handleSubmit}>
-				<label>Username: </label>
+		<main className={styles.StudentServices}>
+			<h1><strong>Account Services - SIGNUP</strong></h1>
+			<form className={styles.SignUpForm} autoComplete="off" onSubmit={handleSubmit}>
+				<label className={styles.Label}>Username: </label>
 				<input className={styles.Placeholder}
-					placeholder='name'
+					placeholder='USERNAME HERE'
 					type="text"
 					name="name"
 					value={formData.username}
 					onChange={handleChange}
 					required
 				/>
-				<label>Email: </label>
+				<label className={styles.Label}>Email: </label>
 				<input className={styles.Placeholder}
-					placeholder='Email'
+					placeholder='EMAIL HERE'
 					type="email"
 					name="email"
 					value={formData.email}
 					onChange={handleChange}
 					required
 				/>
-				<label>Password: </label>
+				<label className={styles.Label}>Password: </label>
 				<input className={styles.Placeholder}
-					placeholder='Password'
+					placeholder='PASSWORD HERE'
 					type="password"
 					name="password"
 					value={formData.password}
 					onChange={handleChange}
 					required
 				/>
-				<label>Confirm Password: </label>
+				<label className={styles.Label}>Confirm Password: </label>
 				<input className={styles.Placeholder}
-					placeholder='Confirm Password'
+					placeholder='CONFIRM PASSWORD HERE'
 					type="password"
 					name="confirm"
 					value={formData.confirm}

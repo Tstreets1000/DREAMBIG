@@ -1,0 +1,30 @@
+.StudentServices {
+    display: flexbox;
+    margin: -6px -4px 36px 431px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0px 0px 12px 148px;
+
+    .Placeholder {
+        text-align: center;
+        color: maroon;
+        margin: 21px 24px 0px 19px;
+        border: 2px solid maroon;
+    }
+
+    .Label {
+        color: maroon;
+        font-style: italic;
+    }
+
+    .LogInBtn {
+        background-color: maroon;
+        color: whitesmoke;
+        border: 2px solid black;
+
+        &:hover {
+            color: maroon;
+            background-color: silver;
+            border: 2px solid maroon;
+        }
+    }
+}

@@ -15,6 +15,10 @@
             color: black;
         }
 
+        &:active {
+            color: black;
+        }
+
 
     }
 
@@ -28,7 +32,9 @@
 }
 
 .Photo {
-    margin: -845px 12px -295px 950px
+    margin: -845px 12px -295px 950px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10px black;
 }
 
 

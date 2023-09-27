@@ -29,18 +29,33 @@ async function handleSubmit(evt) {
 }
 
 return (
-    <div>
-      <h1><strong>Sudent Services</strong></h1>
-      <div>
+    <main className={styles.StudentServices}>
+      <h1><strong>Account Services - LOG IN</strong></h1>
         <form autoComplete="off" onSubmit={handleSubmit}>
-          <label className={styles.logInBtn}>Email:</label>
-          <input type="text" name="email" value={credentials.email} onChange={handleChange} required />
-          <label className={styles.logInBtn}>Password:</label>
-          <input type="password" name="password" value={credentials.password} onChange={handleChange} required />
-          <button submit>LOG IN</button>
+          <label className={styles.Label}>Email: </label>
+          <input className={styles.Placeholder}
+            placeholder="EMAIL HERE" 
+            type="text" 
+            name="email" 
+            value={credentials.email} 
+            onChange={handleChange} 
+            required 
+          />
+          <label className={styles.Label}>Password: </label>
+          <input className={styles.Placeholder}
+            placeholder="PASSWORD HERE" 
+            type="password" 
+            name="password" 
+            value={credentials.password} 
+            onChange={handleChange} 
+            required />
+          <button className={styles.LogInBtn} 
+          type="submit">
+            LOG IN
+          </button>
         </form>
-      </div>
+
       <p className="error-message">&nbsp;{error}</p>
-    </div>
+    </main>
   );
 }

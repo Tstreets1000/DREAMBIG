@@ -1,0 +1,15 @@
+.AuthPage {
+    color: ghostwhite;
+    background-color: maroon;
+    border: 2px solid black;
+    margin: 0px 51px 24px 821px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+
+    &:hover {
+        color: maroon;
+        background-color: silver;
+        border: 2px solid maroon;
+    }
+    
+}
